@@ -1,0 +1,15 @@
+.container
+{
+  width: 250px;
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+}
+
+form
+ {
+  display: inline-block;
+  text-align: left;
+  margin: auto;
+
+ }

@@ -1,0 +1,49 @@
+<div class="container">
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field class="form-group">
+      <mat-label>Title*</mat-label>
+      <input
+        matInput
+        type="text"
+        id="title"
+        formControlName="title"
+        class="form-control"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="form-group">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        id="desc"
+        formControlName="desc"
+        class="form-control"
+      ></textarea>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label>Choose a duedate*</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dueDate" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field fxFlex>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" placeholder="Status">
+        <mat-option *ngFor="let status of statuses" [value]="status">
+          {{ status }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="true" [disabled]="taskForm.invalid" color="primary" type="submit">Save</button>
+</mat-dialog-actions>
+</form>
+</div>

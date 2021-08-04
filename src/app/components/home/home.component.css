@@ -1,3 +1,62 @@
+
+.content-container {
+  margin: 2em;
+}
 .example-spacer {
   flex: 1 1 auto;
 }
+.create-btn{
+  margin: 1em auto;
+  background-color: rgb(235, 233, 230);
+
+}
+table {
+  width: 100%;
+}
+
+.expired{
+  background-color: rgb(255, 243, 233);
+}
+
+.no-data-row
+{
+  padding: 1em;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.example-element-description {
+  display: block;
+  padding: 1em;
+  width: 50%;
+}
+
+.example-element-description.no-desc {
+  opacity: 0.5;
+}
+
+.example-element-position{
+  display: inline-block;
+  width: fit-content;
+  padding: 1em;
+}
+
